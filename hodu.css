@@ -281,6 +281,7 @@ footer {
     width: 600px;
     height: 400px;
     margin: 0 auto;
+    border-radius: 30px;
     background-image: url("image/무제-1 1.png");
     display: flex;
     justify-content: center;
