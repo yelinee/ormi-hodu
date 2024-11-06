@@ -13,13 +13,17 @@
 </head>
 <body>
 <header>
-    <img src="image/Group.png" width="130" height="40" alt="호두의 블로그">
-    <ul class="header-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#"><button class="btn">Download</button></a></li>
-    </ul>
+    <nav class="header-nav">
+     <div>
+         <a href="#"><img src="image/Group.png" width="130" height="40" alt="호두의 블로그"></a>
+         <div>
+             <span><a href="#">Home</a></span>
+             <span><a href="#">About</a></span>
+             <span><a href="#">Support</a></span>
+             <span><a href="#"><button class="btn">Download</button></a></span>
+         </div>
+     </div>
+    </nav>
 </header>
 <main>
     <section class="featured-post">
@@ -30,7 +34,7 @@
                 typesetting industry.<br>
                 Lorem Ipsum has been the industry's standard dummy text<br>
                 ever since the 1500s, when an unknown</p>
-            <button class="btn" type="button">Download</button>
+            <button class="btn downloadBtn" type="button">Download</button>
         </div>
         <div class="featured-post-img"><img src="image/img_cat.png" alt="박스를 머리에 쓴 고양이 사진입니다."></div>
     </section>
@@ -83,11 +87,12 @@
                         Lorem Ipsum has been the industry's standard dummy text </p>
                 </div>
                 <div class="subscribe-box">
+                    <label for="email-input" hidden>이메일</label>
                     <div>
                         <img src="image/mail.png" alt="이메일">
-                        <input class="input-email" type="email" placeholder="Enter your e-mail address">
+                        <input id="email-input" class="input-email" type="email" placeholder="Enter your e-mail address">
                     </div>
-                    <button class="btn" id="popupBtn" onclick="">Subscribe</button>
+                    <button class="btn" id="subscribeBtn">Subscribe</button>
                 </div>
             </section>
         </div>
@@ -96,15 +101,16 @@
 </main>
 <footer>
     <div><img src="image/group.png" alt="hodu"></div>
-    <ul class="social-media-btn">
-        <li><a href="#"><img src="image/icon-blog.png" alt="블로그로 이동"></a></li>
-        <li><a href="#"><img src="image/icon-insta.png" alt="인스타그램으로 이동"></a></li>
-        <li><a href="#"><img src="image/icon-facebook.png" alt="페이스북으로 이동"></a></li>
-        <li><a href="#"><img src="image/icon-youtube.png" alt="유튜브로 이동"></a></li>
-    </ul>
+    <div class="social-media-btn">
+        <a href="https://section.blog.naver.com/"><img src="image/icon-blog.png" alt="블로그로 이동"></a>
+        <a href="https://www.instagram.com/"><img src="image/icon-insta.png" alt="인스타그램으로 이동"></a>
+        <a href="https://www.facebook.com/"><img src="image/icon-facebook.png" alt="페이스북으로 이동"></a>
+        <a href="https://www.youtube.com/"><img src="image/icon-youtube.png" alt="유튜브로 이동"></a>
+    </div>
 </footer>
-<!-- 모달 창을 감싸는 div -->
-<div id="modalWrap">
+
+<!-- 구독 신청 시 나오는 모달 창 -->
+<dialog id="modalWrap">
     <div id="modalBody">
         <div>
             <img src="image/cat 1.png" alt="고양이 얼굴 사진입니다.">
@@ -113,8 +119,8 @@
             <button class="btn" id="closeBtn" onclick="">OK! I Love HODU</button>
         </div>
     </div>
-</div>
-<!-- 최상단으로 올리는 스크롤 버튼   -->
+</dialog>
+<!-- 최상단으로 올리는 스크롤 버튼 -->
 <button onclick="backToTop()" id="btn-back-to-top"><img src="image/scroll-top-btn.png" alt="최상단으로 올리는 스크롤 버튼"></button>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=212fc7f0a6ab6ed4abec9332e7af83a4"></script>
