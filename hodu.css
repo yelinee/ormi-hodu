@@ -1,4 +1,4 @@
-/*전체 스타일 정의*/
+/* 전체 스타일 정의 */
 * {
     margin: 0;
     padding: 0;
@@ -6,123 +6,114 @@
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 16px;
 }
-/*버튼 스타일 정의*/
-.btn{
+
+main {
+    position: relative; /* main 요소를 문서 흐름에 포함 */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* main 내부 초과 영역 제거 */
+    z-index: 0; /* z-index 기본값 유지 */
+}
+
+
+/* 버튼 스타일 정의 */
+.btn {
     background-color: #D97652;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 40px;
     border: none;
     padding: 15px 31px;
-    width: auto;
-    height: 50px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
-/*버튼에 커서를 갖다댔을 때의 효과*/
 .btn:hover {
     opacity: 0.8;
 }
-
 .downloadBtn {
     margin-bottom: 20px;
 }
 
-/*헤더 스타일 정의*/
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 320px;
-    height: 102px;
+/* 헤더 스타일 정의 */
+.header {
     background-color: #F2E9D8;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 1;
+    z-index: 99;
 }
-.header-nav {
-    list-style: none;
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 40px;
+}
+.content {
     display: flex;
     justify-content: space-between;
 }
-.header-nav span {
-    align-content: center;
+.navbar span {
     margin-left: 30px;
 }
-.header-nav span a {
+.link {
     text-decoration: none;
     color: black;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-.header-nav li:nth-last-of-type(1) {
-    margin-left: 40px;
-}
-/*커서를 앵커에 갖다댔을 때의 효과*/
-.header-nav li a:hover {
+.link:hover {
     color: #D97652;
 }
 
-/*대문글 스타일 정의*/
+/* featured-post 섹션 */
 .featured-post {
+    background-color: #F2E9D8;
+    display: flex;
+    justify-content: center;
+}
+.featured-post-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 320px;
-    margin-top: 102px;
-    background-color: #F2E9D8;
+    padding: 0 40px;
+    max-width: 1200px;
 }
 .featured-post-text h1 {
     font-size: 48px;
-    /*font-weight: bold;*/
     margin-bottom: 40px;
 }
 .featured-post-text p {
     margin-bottom: 40px;
 }
-.featured-post-img {
-    align-self: flex-end;
-}
 .featured-post-img img {
-    /*이미지 여백 제거*/
     vertical-align: bottom;
-    /*width: 350px;*/
 }
 
-/*첫 번째 메인 컨텐츠 스타일 정의*/
+/* 첫 번째 메인 컨텐츠 */
 .main-content-1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*justify-content: space-between;*/
-    /*!*padding: 0 320px;*!*/
-    /*padding: 0 16.7%;*/
     margin-top: 80px;
 }
 .main-content1-img img {
     width: 660px;
     height: 390px;
-    object-fit: cover; /*이미지 원본 비율 유지*/
+    object-fit: cover;
     border-radius: 30px;
-    vertical-align: bottom;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
 }
-
 .main-content1-text {
     margin-left: 30px;
 }
-
 .main-content1-text h2 {
     width: 510px;
     font-size: 36px;
-    /*font-weight: bold;*/
     margin-bottom: 30px;
 }
 
-/*두 번째 메인 컨텐츠 스타일 정의*/
+/* 두 번째 메인 컨텐츠 */
 .main-content-2 {
     display: flex;
     justify-content: center;
-    align-content: center;
-    padding: 0 320px;
+    padding: 0 40px;
     margin-top: 120px;
 }
 .main-c2-container {
@@ -139,7 +130,7 @@ header {
     text-align: center;
     margin-bottom: 88px;
 }
-.main-c2-container p span {
+.x-c2-container p span {
     font-weight: bold;
     color: #D97652;
 }
@@ -157,7 +148,6 @@ header {
     border-radius: 30px;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
 }
-/*이미지 불러오기 전에 list-pic의 margin 값이 구현되어서 안 보이게 처리*/
 .list-pic {
     display: none;
     flex-wrap: wrap;
@@ -165,40 +155,27 @@ header {
 .more-image {
     margin-top: 100px;
     margin-bottom: 80px;
+    text-align: center;
 }
 .more-image p {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 28px;
 }
-.more-image div {
-    text-align: center;
-}
-.more-image div button {
-    width: auto;
-}
 
-/*위치와 구독하기 섹션 스타일 정의*/
+/* 위치와 구독하기 섹션 */
 .map-subscribe {
     display: flex;
     justify-content: center;
-    align-content: center;
-    padding: 0 320px;
-    /*padding: 0 16.7%;*/
+    padding: 0 40px;
     width: 100%;
     margin-top: 68px;
     position: relative;
-    height: 1242px;
+    /*height: 1242px;*/
 }
 .map h2 {
     font-size: 36px;
-    /*font-weight: bold;*/
     margin-bottom: 20px;
-}
-.map p {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 48px;
 }
 .subscribe {
     display: flex;
@@ -210,6 +187,8 @@ header {
     padding: 0 58px;
     border-radius: 30px;
     color: #FFFFFF;
+    position: relative;
+    z-index: 1;
 }
 .subscribe-text h3 {
     font-size: 36px;
@@ -229,64 +208,71 @@ header {
     border-radius: 60px;
     background: #FFFFFF;
 }
-.subscribe-box > div:nth-of-type(1) {
-    margin-left: 22px;
-    align-content: center;
+.subscribe-box div {
+    display: flex;
+    align-items: center;
 }
-.subscribe-box > div:nth-of-type(1) img {
-    vertical-align: bottom;
+
+.email-icon {
+    padding: 15px;
 }
+
 .input-email {
     background: none;
     outline: none;
-    padding: 0;
     border: none;
     border-radius: 60px;
-    margin-left: 16px;
 }
-/*하단 배너 스타일 정의*/
+
+/* 하단 배너 */
 .banner {
-    /*display: inline;*/
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1; /*하위에 위치*/
+    position: relative;
+    left: 50%;
+    margin-top: -100px;
+    transform: translateX(-50%);
+    z-index: 0;
+    width: 1920px;
+    max-width: 100%;
+    height: 320px;
+    overflow: hidden;
+    text-align: center;
 }
 .banner img {
-    width: 1920px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    vertical-align: bottom;
+    object-position: 50% 40%;
     background-color: #F2E9D8;
     opacity: 0.6;
 }
-
-/*푸터 스타일 정의*/
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 320px;
-    height: 160px;
+/* 푸터 */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 40px;
 }
 .social-media-btn {
-    list-style: none;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 .social-media-btn a {
     margin-left: 20px;
+    transition: opacity 0.3s ease;
 }
 
-/*모달 창 스타일 정의*/
+.social-media-btn a:hover {
+    opacity: 0.8;
+}
+
+/* 모달 창 */
 #modalWrap {
-    position: fixed; /* 화면에 고정 */
-    z-index: 1; /* 상위에 위치 */
+    position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경색 */
-    display: none; /* 초기에는 숨김 */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
 }
 #modalBody {
     position: fixed;
@@ -295,7 +281,6 @@ footer {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 400px;
-    margin: 0 auto;
     border-radius: 30px;
     background-image: url("image/무제-1 1.png");
     display: flex;
@@ -303,33 +288,44 @@ footer {
     align-items: center;
     text-align: center;
 }
-#modalBody div p:nth-of-type(1) {
+#modalBody div p:first-of-type {
     font-size: 36px;
     font-weight: bold;
     color: #D97652;
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin: 24px 0 12px;
 }
 #modalBody div p:nth-of-type(2) {
     font-size: 14px;
     margin-bottom: 38px;
 }
-.img-width img{
-    width: 378px;
-    height: 378px;
-}
-/*페이지 최상단으로 스크롤하는 버튼 스타일*/
+
+/* 최상단 스크롤 버튼 */
 #btn-back-to-top {
     display: none;
     position: fixed;
     bottom: 19px;
     right: 19px;
-    z-index: 1;
     border: none;
-    outline: none;
     cursor: pointer;
     background-color: transparent;
 }
 #btn-back-to-top:hover {
     opacity: 0.7;
+}
+
+/* about, support 페이지 메인 */
+.main-container {
+    height: 560px;
+    background-color: #F2E9D8;
+    text-align: center;
+    padding: 40px 40px;
+}
+
+.main-container h1 {
+    font-size: 35px;
+    padding: 20px;
+}
+
+.main-container p {
+    font-size: 20px;
 }
