@@ -12,31 +12,36 @@
     </style>
 </head>
 <body>
-<header>
-    <nav class="header-nav">
-     <div>
-         <a href="#"><img src="image/Group.png" width="130" height="40" alt="호두의 블로그"></a>
-         <div>
-             <span><a href="#">Home</a></span>
-             <span><a href="#">About</a></span>
-             <span><a href="#">Support</a></span>
-             <span><a href="#"><button class="btn">Download</button></a></span>
+<header class="header">
+    <nav class="navbar">
+         <div class="content">
+             <div class="navbar-left">
+                 <a href="index.html"><img src="image/Group.png" width="130" height="40" alt="호두의 블로그"></a>
+             </div>
+             <div class="navbar-right">
+                 <span><a class="link" href="index.html">Home</a></span>
+                 <span><a class="link" href="about.html">About</a></span>
+                 <span><a class="link" href="support.html">Support</a></span>
+                 <span><a href="/image/img.jpeg" download><button class="btn">Download</button></a></span>
+             </div>
          </div>
-     </div>
     </nav>
 </header>
 <main>
     <section class="featured-post">
-        <div class="featured-post-text">
-            <h1>Lorem Ipsum is simply<br>
-                dummy text of the printing and</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and<br>
-                typesetting industry.<br>
-                Lorem Ipsum has been the industry's standard dummy text<br>
-                ever since the 1500s, when an unknown</p>
-            <button class="btn downloadBtn" type="button">Download</button>
+        <div class="featured-post-container">
+            <div class="featured-post-text">
+                <h1>Lorem Ipsum is simply<br>
+                    dummy text of the printing and</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and<br>
+                    typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text<br>
+                    ever since the 1500s, when an unknown</p>
+                <a href="/image/img_cat.png" download><button class="btn downloadBtn" type="button">Download</button></a>
+
+            </div>
+            <div class="featured-post-img"><img src="image/img_cat.png" alt="박스를 머리에 쓴 고양이 사진입니다."></div>
         </div>
-        <div class="featured-post-img"><img src="image/img_cat.png" alt="박스를 머리에 쓴 고양이 사진입니다."></div>
     </section>
     <section class="main-contents">
         <section class="main-content-1">
@@ -89,23 +94,29 @@
                 <div class="subscribe-box">
                     <label for="email-input" hidden>이메일</label>
                     <div>
-                        <img src="image/mail.png" alt="이메일">
+                        <img class="email-icon" src="image/mail.png" alt="이메일">
                         <input id="email-input" class="input-email" type="email" placeholder="Enter your e-mail address">
                     </div>
                     <button class="btn" id="subscribeBtn">Subscribe</button>
                 </div>
             </section>
         </div>
-        <div class="banner"><img src="image/img_7.jpeg" alt="배너 이미지"></div>
     </section>
+    <div class="banner">
+        <img src="image/img_7.jpeg" alt="배너 이미지">
+    </div>
 </main>
-<footer>
-    <div><img src="image/group.png" alt="hodu"></div>
-    <div class="social-media-btn">
-        <a href="https://section.blog.naver.com/"><img src="image/icon-blog.png" alt="블로그로 이동"></a>
-        <a href="https://www.instagram.com/"><img src="image/icon-insta.png" alt="인스타그램으로 이동"></a>
-        <a href="https://www.facebook.com/"><img src="image/icon-facebook.png" alt="페이스북으로 이동"></a>
-        <a href="https://www.youtube.com/"><img src="image/icon-youtube.png" alt="유튜브로 이동"></a>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="content">
+            <div><img src="image/group.png" alt="hodu"></div>
+            <div class="social-media-btn">
+                <a href="https://section.blog.naver.com/"><img src="image/icon-blog.png" alt="블로그로 이동"></a>
+                <a href="https://www.instagram.com/"><img src="image/icon-insta.png" alt="인스타그램으로 이동"></a>
+                <a href="https://www.facebook.com/"><img src="image/icon-facebook.png" alt="페이스북으로 이동"></a>
+                <a href="https://www.youtube.com/"><img src="image/icon-youtube.png" alt="유튜브로 이동"></a>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -128,6 +139,7 @@
 <script src="modalscript.js"></script>
 <script src="map.js"></script>
 <script src="scroll.js"></script>
+<script type="text/javascript" src="http://bpmaker.giffy.me/userdata/user/54/54797/2/parts.js"></script>
 
 </body>
 </html>
