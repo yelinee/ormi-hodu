@@ -62,95 +62,93 @@ main {
     color: #D97652;
 }
 
-/* featured-post 섹션 */
-.featured-post {
+/* top banner 섹션 */
+.top-banner {
     background-color: #F2E9D8;
     display: flex;
     justify-content: center;
 }
-.featured-post-container {
+.banner-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
     max-width: 1200px;
 }
-.featured-post-text h1 {
+.banner-text h1 {
     font-size: 48px;
     margin-bottom: 40px;
 }
-.featured-post-text p {
+.banner-text p {
     margin-bottom: 40px;
 }
-.featured-post-img img {
+.banner-img img {
     vertical-align: bottom;
 }
 
-/* 첫 번째 메인 컨텐츠 */
-.main-content-1 {
+/* 소개글 섹션 */
+.introduce {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 80px;
 }
-.main-content1-img img {
+.introduce-img img {
     width: 660px;
     height: 390px;
     object-fit: cover;
     border-radius: 30px;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
 }
-.main-content1-text {
+.introduce-text {
     margin-left: 30px;
 }
-.main-content1-text h2 {
+.introduce-text h2 {
     width: 510px;
     font-size: 36px;
     margin-bottom: 30px;
 }
 
-/* 두 번째 메인 컨텐츠 */
-.main-content-2 {
+/* 갤러리 섹션 */
+.gallery {
     display: flex;
     justify-content: center;
-    padding: 0 40px;
+    /*padding: 0 40px;*/
     margin-top: 120px;
 }
-.main-c2-container {
+.gallery-container {
     border-bottom: 1px solid #C4C4C4;
+    padding: 0 40px;
 }
-.main-c2-container h2 {
+.gallery-container h2 {
     font-size: 48px;
     font-weight: bold;
     color: #D97652;
     text-align: center;
     margin-bottom: 40px;
 }
-.main-c2-container p {
+.gallery-container p {
     text-align: center;
     margin-bottom: 88px;
 }
-.x-c2-container p span {
+.gallery-container p span {
     font-weight: bold;
     color: #D97652;
 }
-.img-list-1, .img-list-2, .list-pic {
+.list-pic {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 72px;
-    margin-bottom: 72px;
+    max-width: 1300px;
 }
-.img-list-1 img, .img-list-2 img, .list-pic img {
+.list-pic li img {
     width: 378px;
     height: 378px;
     object-fit: cover;
     border-radius: 30px;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
-}
-.list-pic {
-    display: none;
-    flex-wrap: wrap;
 }
 .more-image {
     margin-top: 100px;
@@ -163,21 +161,31 @@ main {
     margin-bottom: 28px;
 }
 
-/* 위치와 구독하기 섹션 */
-.map-subscribe {
+/* map 섹션 */
+.map {
     display: flex;
     justify-content: center;
     padding: 0 40px;
     width: 100%;
     margin-top: 68px;
     position: relative;
-    /*height: 1242px;*/
 }
 .map h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
+
+/* subscribe 섹션 */
 .subscribe {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    width: 100%;
+    margin-top: 68px;
+    position: relative;
+}
+
+.subscribe-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -225,7 +233,7 @@ main {
 }
 
 /* 하단 배너 */
-.banner {
+.bottom-banner {
     position: relative;
     left: 50%;
     margin-top: -100px;
@@ -237,7 +245,7 @@ main {
     overflow: hidden;
     text-align: center;
 }
-.banner img {
+.bottom-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;

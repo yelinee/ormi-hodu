@@ -24,7 +24,7 @@ async function fetchImages(page){
 }
 function makeImageList(datas){
     datas.forEach((data)=>{
-        listPic.insertAdjacentHTML('beforeend', `<li class="img-width"><img src="${data.download_url}" alt=""></li>`);
+        listPic.insertAdjacentHTML('beforeend', `<li><img src="${data.download_url}" alt=""></li>`);
     });
     listPic.style.display = "flex";
 }
