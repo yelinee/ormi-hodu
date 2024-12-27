@@ -17,7 +17,7 @@ HTML, CSS, JavaScript를 활용한 HODU Page 구현
 - Show more 클릭 시 추가 이미지 랜더링
 
 ### 3. kakao map api를 이용한 지도 구현
-<img src="https://github.com/user-attachments/assets/de5a74d5-530d-4fbd-8f70-d30f331aa758">
+<img src="https://github.com/user-attachments/assets/de5a74d5-530d-4fbd-8f70-d30f331aa758" width=600px>
 
 ### 4. 모달창
 <img src="https://github.com/user-attachments/assets/b5c5d075-5e57-4e2d-bf95-a8b73d2903b2">
